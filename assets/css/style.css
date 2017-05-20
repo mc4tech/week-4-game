@@ -1,0 +1,58 @@
+#header, #instructions, #targetScore, #scoreBox, #message, #userScore, #crystals{
+	margin: 1%;
+}
+
+
+
+#header {
+	background:#c97127;
+	color: #fdfce8;
+}
+
+#instructions {
+	background: #fbe7cc;
+	color: #9daf5d;
+}
+
+#targetScore {
+	background: #5bc880;
+	color: #614360;
+	/*margin: 1%;*/
+}
+
+#scoreBox {
+	background: #4bfdfc;
+	color: #39cfbc;
+}
+
+#message, #userScore {
+	background: #2ca294;
+	color: #bee5e4;
+}
+
+#userScore{
+	/*margin-top: 1%;*/
+}
+
+#crystals{
+/*	float: left;*/
+/*	margin: 1%;*/
+}
+
+#footer {
+        padding: 30px 0;
+        clear: both;
+        font-size: 12px;
+        color: #fff;
+        color: #ccc;
+        text-align: center;
+        /*background: #666;*/
+        /*border-top: 8px solid #4aaaa5;*/
+        /*Cowboys footer*/
+        background: rgb(12,42,86);       
+        border-top: 8px solid rgb(99,129,135);
+        /*Falcons footer*/
+        /*background: rgb(6,1,1);       
+        border-top: 8px solid rgb(248,2,28);*/
+
+}
