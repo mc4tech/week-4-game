@@ -75,29 +75,10 @@ $(document).ready(function() {
 
 		$(".crystalImage").on("click", function() {
 			userScore = userScore + parseInt($(this).data("num"));
-			// checkScore();
-
+		
 			$("#userScore").text(userScore);
 				checkScore();
-				// if (userScore == targetScore) {
-				// 	$("#status").text("YOU WON!!!");
-				// 	wins++;
-				// 	$("#win").text(wins);
-				// 	console.log(wins);
-				// 	$("#crystals").empty();
-				// 	newCrystals();
-				// 	newGame();
-				// } else if (userScore >= targetScore) {
-				// 	$("status").text("You Lose :(");
-				// 	losses++;
-				// 	$("#loss").text(losses);
-				// 	console.log(losses);
-				// 	$("#crystals").empty();
-				// 	newCrystals();
-				// 	newGame();
-				//  } else if (userScore <= targetScore) {
-				//  	console.log(userScore);
-				//  }
+				
 		});
 		console.log("User Score is : " + userScore);
 	}
