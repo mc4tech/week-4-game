@@ -35,7 +35,7 @@ $(document).ready(function() {
 		var numbers = [];
 			// generate 4 random values and pushed into crystalValue still needs parse
 		while(numbers.length < 4) {
-			randCrystal = (Math.floor(Math.random() * 12) +1);
+			randCrystal = getRandomIntInclusive(1,12);
 			var found = false;
 			console.log("random crystal is : " + randCrystal);
 			// crystalValue.push(randCrystal);
