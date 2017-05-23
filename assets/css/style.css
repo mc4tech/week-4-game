@@ -1,23 +1,35 @@
 #header, #instructions, #targetScore, #scoreBox, #message, #userScore, #crystals{
 	margin: 1%;
+        font-family: "Georgia", "Times", "serif";
 }
 
-
+#header, #userScore {
+         padding: 1%;
+}
 
 #header {
 	background:#c97127;
 	color: #fdfce8;
+        font-size: 28px;
+        font-weight: normal; 
+}
+
+#header, #targetScore{
+        height: 100px;
 }
 
 #instructions {
 	background: #fbe7cc;
 	color: #9daf5d;
+        font-family: "Arial", "Sans-serif";
+        font-size: 18px;
+        padding-bottom: 5%;
+        padding-top: 2%;
 }
 
 #targetScore {
 	background: #5bc880;
 	color: #614360;
-	/*margin: 1%;*/
 }
 
 #scoreBox {
@@ -28,15 +40,13 @@
 #message, #userScore {
 	background: #2ca294;
 	color: #bee5e4;
+      
 }
 
-#userScore{
-	/*margin-top: 1%;*/
-}
-
-#crystals{
-    /*    height: 50px;*/
-/*	margin: 1%;*/
+.crystalImage {
+        margin: 1%;
+        height: 90px;
+        width: 70px;
 }
 
 #footer {
@@ -46,13 +56,7 @@
         color: #fff;
         color: #ccc;
         text-align: center;
-        /*background: #666;*/
-        /*border-top: 8px solid #4aaaa5;*/
-        /*Cowboys footer*/
         background: rgb(12,42,86);       
         border-top: 8px solid rgb(99,129,135);
-        /*Falcons footer*/
-        /*background: rgb(6,1,1);       
-        border-top: 8px solid rgb(248,2,28);*/
-
+        
 }

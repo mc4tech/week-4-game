@@ -1,10 +1,9 @@
 $(document).ready(function() {
 	//global variables
 	var targetScore = 0;
-	var counter = 0;
 	var wins = 0;
 	var losses = 0;
-	var userScore = 0;
+	// var userScore = 0;
 
 	crystals = ["assets/images/red.png", "assets/images/blue.png", "assets/images/yellow.png", "assets/images/green.png"];
 
@@ -12,8 +11,14 @@ $(document).ready(function() {
 
 	$('#win').text(wins);
 	$('#loss').text(losses);
+
+	randScore();
+	// console.log(randScore);
+	newCrystals();
+	newGame();
+
 	//this function generates a random number between 1-120 for the target score
-	var randScore = function(){
+	function randScore(){
 		// targetScore = (Math.floor(Math.random() * 120) + 19);
 		targetScore = getRandomIntInclusive(19,120);
 		console.log("Target score is : " + targetScore);
@@ -26,10 +31,7 @@ $(document).ready(function() {
 	  return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 
-	randScore();
-	// console.log(randScore);
-	newCrystals();
-	newGame();
+	
 
 	function newCrystals () {
 		var numbers = [];
@@ -46,7 +48,8 @@ $(document).ready(function() {
 
 			for (var i = 0; i < numbers.length; i++) {
 				if (numbers[i] === randCrystal) {
-					found = true; break
+					found = true; 
+					break
 				}
 			}
 			if (!found) {
@@ -62,10 +65,10 @@ $(document).ready(function() {
 			imageCrystal.addClass('crystalImage')
 			$('#crystals').append(imageCrystal);
 		}
-	}
+	};
 
 	function newGame() {
-		
+	
 		userScore = 0;
 		$("#userScore").text(userScore);
 
@@ -78,18 +81,19 @@ $(document).ready(function() {
 		
 			$("#userScore").text(userScore);
 				checkScore();
-				
+
 		});
 		console.log("User Score is : " + userScore);
-	}
+	};
 	
 
 	
 	
 	//logic to test userScore vs targetScore
 	function checkScore() {	
-		if (userScore == targetScore) {
+		if (userScore === targetScore) {
 			$("#status").text("YOU WON!!!");
+			console.log(status);
 			wins++;
 			$("#win").text(wins);
 			console.log(wins);
@@ -97,7 +101,8 @@ $(document).ready(function() {
 			newCrystals();
 			newGame();
 		} else if (userScore >= targetScore) {
-			$("status").text("You Lose :(");
+			$("status").text("You Lose");
+			console.log(status);
 			losses++;
 			$("#loss").text(losses);
 			console.log(losses);
@@ -106,8 +111,9 @@ $(document).ready(function() {
 			newGame();
 		 } else if (userScore <= targetScore) {
 		 	console.log(userScore);
+		 	$("status").empty();
 		 }
-	}
+	};
 
 
 });
